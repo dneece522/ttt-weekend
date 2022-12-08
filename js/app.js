@@ -16,11 +16,18 @@ const messageEl = document.getElementById('message')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-
+document.addEventListener("DOMContentLoaded", init)
 
 /*-------------------------------- Functions --------------------------------*/
 
-
+function init() {
+  board = [null, null, null, null, null, null, null, null, null]
+  //        tl    tm    tr    ml    mm    mr    bl    bm    br
+  turn = 1       //this represents player X's turn
+  winner = false //means there is no winner yet
+  tie = false    //means that there are still null values on the board (no tie)
+  render()
+}
 
 /*------------------------------- Pseudo Code -------------------------------*/
 //// Step 1 - Define the required variables used to track the state of the game
@@ -44,23 +51,23 @@ const messageEl = document.getElementById('message')
   ////   game's status on the page.
 
 
-// Step 3 - Upon loading, the game state should be initialized, and a function 
-//          should be called to render this game state.
+//// Step 3 - Upon loading, the game state should be initialized, and a function 
+////          should be called to render this game state.
 
-  // 3a) Create a function called `init`.
+  //// 3a) Create a function called `init`.
 
-  // 3b) Call this `init` function when the app loads.
+  //// 3b) Call this `init` function when the app loads.
   
-  // 3c) Set the `board` variable to an array containing nine `null`s to 
-  //    represent empty squares.
+  //// 3c) Set the `board` variable to an array containing nine `null`s to 
+  ////    represent empty squares.
 
-  // 3d) Set the `turn` to `1` - which will represent player X.
+  //// 3d) Set the `turn` to `1` - which will represent player X.
 
-  // 3e) Set the `winner` to false.
+  //// 3e) Set the `winner` to false.
 
-  // 3f) Set `tie` to false.
+  //// 3f) Set `tie` to false.
 
-  // 3g) Call a function called `render` at the end of the `init` function.
+  //// 3g) Call a function called `render` at the end of the `init` function.
 
 
 // Step 4 - The state of the game should be rendered to the user
