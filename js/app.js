@@ -29,6 +29,28 @@ function init() {
   render()
 }
 
+function render() {
+  updateBoard()
+  updateMessage()
+}
+
+function updateBoard() {
+  for (let i = 0; i < board.length; i++) {
+    board[i] = squareEls[i]
+
+  }
+}
+
+function updateMessage() {
+  if (winner === false && tie === false) {
+    messageEl.textContent = `It is ${turn}'s turn.`
+  } else if (winner === false && tie === true) {
+    messageEl.textContent = "It is a tie."
+  } else {
+    messageEl.textContent = `Congrats! Player ${turn} has won.`
+  }
+}
+
 /*------------------------------- Pseudo Code -------------------------------*/
 //// Step 1 - Define the required variables used to track the state of the game
 
