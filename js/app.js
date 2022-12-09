@@ -32,7 +32,7 @@ document.querySelector('.board').addEventListener('click', handleClick)
 init()
 
 function init() {
-  board = [null, 1, null, null, null, null, null, null, null]
+  board = [null, null, null, null, null, null, null, null, null]
   //        tl    tm    tr    ml    mm    mr    bl    bm    br
   turn = 1       //this represents player X's turn
   winner = false //means there is no winner yet
@@ -96,6 +96,14 @@ function checkForWinner() {
     if (total === 3) {
       winner = true
     }
+  }
+}
+
+function switchPlayerTurn() {
+  if (winner === true) {
+    return
+  } else {
+    turn = turn * -1
   }
 }
 
