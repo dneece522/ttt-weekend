@@ -77,6 +77,10 @@ function handleClick(evt) {
   }
 }
 
+function placePiece(idx) {
+  board[idx] = turn
+}
+
 /*------------------------------- Pseudo Code -------------------------------*/
 //// Step 1 - Define the required variables used to track the state of the game
 
