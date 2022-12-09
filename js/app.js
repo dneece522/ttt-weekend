@@ -81,6 +81,14 @@ function placePiece(idx) {
   board[idx] = turn
 }
 
+function checkForTie() {
+  if (board.some(board => board === null)) {
+    tie = false
+  } else {
+    tie = true
+  }
+}
+
 /*------------------------------- Pseudo Code -------------------------------*/
 //// Step 1 - Define the required variables used to track the state of the game
 
