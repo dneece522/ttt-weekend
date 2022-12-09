@@ -89,6 +89,16 @@ function checkForTie() {
   }
 }
 
+function checkForWinner() {
+  for (let i = 0; i < winningCombos.length; i++) {
+    let total = Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]])
+
+    if (total === 3) {
+      winner = true
+    }
+  }
+}
+
 /*------------------------------- Pseudo Code -------------------------------*/
 //// Step 1 - Define the required variables used to track the state of the game
 
