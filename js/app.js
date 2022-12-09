@@ -22,10 +22,12 @@ let tie     //represents if the game has ended in a tie
 
 const squareEls = document.getElementsByClassName('sqr')
 const messageEl = document.getElementById('message')
+const resetBtnEl = document.getElementById('btn')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
 document.querySelector('.board').addEventListener('click', handleClick)
+resetBtnEl.addEventListener('click', init)
 
 /*-------------------------------- Functions --------------------------------*/
 
