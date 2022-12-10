@@ -51,8 +51,10 @@ function updateBoard() {
   board.forEach((sqr, idx) => {
     if (sqr === 1) { //X's turn
       squareEls[idx].innerText = 'X'
+      squareEls[idx].style.color = 'red'
     } else if (sqr === -1) { //O's turn
       squareEls[idx].innerText = 'O'
+      squareEls[idx].style.color = 'blue'
     } else {
       squareEls[idx].innerText = ''
     }
@@ -62,10 +64,13 @@ function updateBoard() {
 function updateMessage() {
   if (winner === false && tie === false) {
     messageEl.textContent = turn === -1 ? "Player O's Turn" :  "Player X's Turn"
+    messageEl.style.color = turn === -1 ? 'blue' :  'red'
   } else if (winner === false && tie === true) {
-    messageEl.textContent = "It is a tie."
+    messageEl.textContent = "CAT!"
+    messageEl.style.color = 'purple'
   } else {
-    messageEl.textContent = turn === -1 ? "Player O Won" :  "Player X Won"
+    messageEl.textContent = turn === -1 ? "Player O Won!" :  "Player X Won!"
+    messageEl.style.color = turn === -1 ? 'blue' :  'red'
   }
 }
 
@@ -272,12 +277,12 @@ function switchPlayerTurn() {
   ////       render that updated state to the user by calling the `render` 
   ////       function that we wrote earlier.
 
-// Step 7 - Create Reset functionality
+//// Step 7 - Create Reset functionality
 
-  // 7a) Add a reset button to the HTML document.
+  //// 7a) Add a reset button to the HTML document.
 
-  // 7b) Store the new reset button element as a cached element reference in
-  //     a constant named `resetBtnEl`.
+  //// 7b) Store the new reset button element as a cached element reference in
+  ////     a constant named `resetBtnEl`.
 
-  // 7c) Attach an event listener to the `resetBtnEl`. On the `'click'` event 
-  //     it should call the `init` function you created in step 3.
+  //// 7c) Attach an event listener to the `resetBtnEl`. On the `'click'` event 
+  ////     it should call the `init` function you created in step 3.
