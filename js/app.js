@@ -75,7 +75,7 @@ function updateMessage() {
 }
 
 function handleClick(evt) {
-  let sqIdx = evt.target.id.slice(2, 3)
+  let sqIdx = evt.target.id.replace('sq', '')
   if (board[sqIdx] !== null) {
     return
   }
